@@ -33,7 +33,7 @@ Completely serverless in frontend.
 
 Configure an Amazon CloudFront distribution to serve HTTPS requests for my Amazon Simple Storage Service (Amazon S3).
 
-User  www  AWS CloudFront  S3 website
+**User** &rarr; **www** &rarr; **AWS CloudFront** &rarr; **S3 website**
 
 •	CloudFront: 
 1.	It is a content delivery network of edge locations
