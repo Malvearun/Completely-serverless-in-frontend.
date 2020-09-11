@@ -93,7 +93,7 @@ Reference link: [bucket-policies](https://docs.aws.amazon.com/AmazonS3/latest/de
 •	AWS console > services > CloudFront > Create Distribution / Get started. Before this we will create `OAI`.
 •	`Security`  > `Origin access Identity` (OAI) > `Create` > `MyOAI-S3`
 •	`Create Distribution` > we are creating `web` for this project `Get started` > 
-1.	Origin Domain Name: S3 link should be prepopulated, so select.
+1.	Origin Domain Name: S3 link should be prepopulated, so select `test-front-end-bucket-7685678456`.
 2.	Restriction Access: `Yes`
 a.	Origin Access Identity: use an existing identity: `MyOAI-S3`
 b.	Grant Read Permission on bucket: `No`
@@ -109,7 +109,23 @@ b.	Grant Read Permission on bucket: `No`
 ##### Head back to S3 bucket to modify the policy, so CloudFront distribution has OAI can access the objects within the bucket.
 
 1.	Under `permissions` > `bucket policy` from `cloudfront-access-to-amazon-s3` > 
-Only changes under principle section.
+Only changes under `Principal` section.
+
+`{
+
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+            		"AWS": "arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity EAF5XXXXXXXXX"
+		        },
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::test-front-end-bucket-7685678456909/*"
+        }
+    ]
+    
+}`
 
 Reference: [cloudfront-access-to-amazon-s3](https://aws.amazon.com/premiumsupport/knowledge-center/cloudfront-access-to-amazon-s3/) 
 
