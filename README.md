@@ -129,7 +129,10 @@ Only changes under `Principal` section.
 
 Reference: [cloudfront-access-to-amazon-s3](https://aws.amazon.com/premiumsupport/knowledge-center/cloudfront-access-to-amazon-s3/) 
 
-•	Head back to CloudFront and check the distribution status has `Deployed` .
+•	Head back to CloudFront and check the distribution status has `Deployed`
+
 •	Click on the ID of distribution and look for `Domain Name` of distribution: copy
+
 •	Paste the Domain Name in the browser to check if it works. Secured at this point.
+
 •	From S3 endpoint link, should be able to access the content anymore - `Access Denied` expected behaviour. Has OAI ID is been mentioned in bucket policy to access content within the bucket.
