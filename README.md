@@ -1,5 +1,7 @@
 # Completely-Serverless-In-Frontend.
 
+## S3-CloudFront
+
 ### Why Serverless?
 •	No server to manage
 •	Scaling & HA: How will be scaling will be handled, depends upon the request usage by the provider. No additional charges are to be paid.
@@ -61,7 +63,8 @@ Configure an Amazon CloudFront distribution to serve HTTPS requests for my Amazo
 #### Steps for creation of S3 bucket:
 
 •	Login to AWS console and create a new bucket with a unique name `test-front-end-bucket-7685678456`  
-•	next window Configure options with properties, versioning, tags, object level logging leave has default.
+•	next window Configure options with properties, versioning, tags, object level logging leave has default. 
+
 •	Set permissions > check only `two ACL’s` first two of the 4 properties.
 •	Review and create the bucket.
 
